@@ -15,7 +15,7 @@ const meta = {
     parameters: {
         design: {
             type: "figma",
-            url: "https://www.figma.com/proto/3SSRNqJ5QqPoz9HSWsKdR9/Hot-potato?type=design&node-id=15-315&t=Pofe34gwwmhKjJgw-0&scaling=min-zoom&page-id=11%3A17&starting-point-node-id=15%3A315",
+            url: "https://www.figma.com/proto/3SSRNqJ5QqPoz9HSWsKdR9/Hot-potato?type=design&node-id=15-581&t=u79YW8Z1TH8yC4Vt-0&scaling=min-zoom&page-id=11%3A17&starting-point-node-id=15%3A581",
         },
     },
 } satisfies Meta<Button>
@@ -36,17 +36,24 @@ export const Story2: Story = {
         functionTest: true
     },
     name: "Expect on:click event forwarding",
-    parameters: {
-        design: {
-            type: "figma",
-            url: "https://www.figma.com/proto/3SSRNqJ5QqPoz9HSWsKdR9/Hot-potato?type=design&node-id=15-359&t=9FjMzztWiJvRJ6oM-0&scaling=min-zoom&page-id=11%3A17&starting-point-node-id=15%3A359",
-        },
-    },
     play: async ({ canvasElement }) => {
         console.log = jest.fn()
         const canvas = within(canvasElement)
         const button = await canvas.getByRole("button")
         await userEvent.click(button)
         await expect(console.log).toHaveBeenCalledWith(TEST_STRING)
+    },
+}
+
+export const Story3: Story = {
+    args: {
+        label: "I'm a button"
+    },
+    name: "Styling story",
+    parameters: {
+        design: {
+            type: "figma",
+            url: "https://www.figma.com/proto/3SSRNqJ5QqPoz9HSWsKdR9/Hot-potato?type=design&node-id=15-595&t=u79YW8Z1TH8yC4Vt-0&scaling=min-zoom&page-id=11%3A17&starting-point-node-id=15%3A595"
+        },
     },
 }
