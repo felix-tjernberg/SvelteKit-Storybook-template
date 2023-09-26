@@ -1,0 +1,89 @@
+:root {
+    --font-family-primary: "Nunito Sans", sans-serif;
+    --font-family-secondary: "Ubuntu", sans-serif;
+    --font-family-3d: "Nabla", monospace;
+
+    --scale-000: 0.704;
+    --scale-100: 1;
+    --scale-200: 1.42;
+    --scale-300: 2.0164;
+    --scale-400: 2.863288;
+    --scale-500: 4.06586896;
+    --scale-600: 5.7735339232;
+    --scale-700: 8.198418170944;
+
+    --base-font-size: calc(1rem + 2px);
+    --static-scale-000: calc(var(--base-font-size) * var(--scale-000));
+    --static-scale-100: var(--base-font-size);
+    --static-scale-200: calc(var(--base-font-size) * var(--scale-200));
+    --static-scale-300: calc(var(--base-font-size) * var(--scale-300));
+    --static-scale-400: calc(var(--base-font-size) * var(--scale-400));
+    --static-scale-500: calc(var(--base-font-size) * var(--scale-500));
+    --static-scale-600: calc(var(--base-font-size) * var(--scale-600));
+
+    --relative-scale-000: calc(1em * var(--scale-000));
+    --relative-scale-100: 1em;
+    --relative-scale-200: calc(1em * var(--scale-200));
+    --relative-scale-300: calc(1em * var(--scale-300));
+    --relative-scale-400: calc(1em * var(--scale-400));
+    --relative-scale-500: calc(1em * var(--scale-500));
+    --relative-scale-600: calc(1em * var(--scale-600));
+
+    --gray-static-000: hsl(0, 0%, 98%);
+
+    --gray-000-90-percent: hsl(0, 0%, 98%, 90%);
+    --gray-000: var(--gray-static-000);
+    --gray-100: hsl(0, 0%, 96%);
+    --gray-200: hsl(0, 0%, 93%);
+    --gray-300: hsl(0, 0%, 89%);
+    --gray-400: hsl(0, 0%, 85%);
+    --gray-500: hsl(0, 0%, 80%);
+    --gray-600: hsl(0, 0%, 62%);
+    --gray-700: hsl(0, 0%, 43%);
+    --gray-800: hsl(0, 0%, 24%);
+    --gray-900: hsl(0, 0%, 5%);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --gray-900: var(-gray-static-000);
+        --gray-800: hsl(0, 0%, 96%);
+        --gray-700: hsl(0, 0%, 93%);
+        --gray-600: hsl(0, 0%, 89%);
+        --gray-500: hsl(0, 0%, 85%);
+        --gray-400: hsl(0, 0%, 80%);
+        --gray-300: hsl(0, 0%, 62%);
+        --gray-200: hsl(0, 0%, 43%);
+        --gray-100: hsl(0, 0%, 24%);
+        --gray-000: hsl(0, 0%, 5%);
+        --gray-000-90-percent: hsl(0, 0%, 0%, 90%);
+    }
+}
+
+[data-lightness-mode="light"] {
+    --gray-000-90-percent: hsl(0, 0%, 98%, 90%);
+    --gray-000: var(--gray-static-000);
+    --gray-100: hsl(0, 0%, 96%);
+    --gray-200: hsl(0, 0%, 93%);
+    --gray-300: hsl(0, 0%, 89%);
+    --gray-400: hsl(0, 0%, 85%);
+    --gray-500: hsl(0, 0%, 80%);
+    --gray-600: hsl(0, 0%, 62%);
+    --gray-700: hsl(0, 0%, 43%);
+    --gray-800: hsl(0, 0%, 24%);
+    --gray-900: hsl(0, 0%, 5%);
+}
+
+[data-lightness-mode="dark"] {
+    --gray-900: var(-gray-static-000);
+    --gray-800: hsl(0, 0%, 96%);
+    --gray-700: hsl(0, 0%, 93%);
+    --gray-600: hsl(0, 0%, 89%);
+    --gray-500: hsl(0, 0%, 85%);
+    --gray-400: hsl(0, 0%, 80%);
+    --gray-300: hsl(0, 0%, 62%);
+    --gray-200: hsl(0, 0%, 43%);
+    --gray-100: hsl(0, 0%, 24%);
+    --gray-000: hsl(0, 0%, 5%);
+    --gray-000-90-percent: hsl(0, 0%, 0%, 90%);
+}

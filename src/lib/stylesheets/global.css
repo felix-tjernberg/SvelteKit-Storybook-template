@@ -1,0 +1,16 @@
+html {
+    text-wrap: balance;
+}
+html,
+body {
+    background-color: var(--gray-000);
+    height: 100%;
+}
+
+h1 {
+    text-transform: capitalize;
+    line-height: 1;
+}
+p {
+    line-height: 1.666;
+}
