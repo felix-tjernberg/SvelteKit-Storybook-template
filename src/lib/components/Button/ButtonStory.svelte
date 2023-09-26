@@ -3,6 +3,11 @@
     import { TEST_STRING } from "./TEST_STRING"
 
     export let label: string
+    export let functionTest: boolean = false
 </script>
 
-<Button {label} on:click={() => console.log(TEST_STRING)} />
+{#if functionTest}
+    <Button {label} on:click={() => console.log(TEST_STRING)} />
+{:else}
+    <Button {label} />
+{/if}

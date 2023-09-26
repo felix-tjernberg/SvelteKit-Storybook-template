@@ -10,6 +10,7 @@ const meta = {
     component: Button,
     argTypes: {
         label: { control: "text" },
+        functionTest: {table: {disable: true}}
     },
     parameters: {
         design: {
@@ -32,8 +33,9 @@ export const Story1: Story = {
 export const Story2: Story = {
     args: {
         label: "on:click me daddy",
+        functionTest: true
     },
-    name: "on:click",
+    name: "Expect on:click event forwarding",
     parameters: {
         design: {
             type: "figma",
